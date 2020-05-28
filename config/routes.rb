@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   
   root 'welcome#index'
 
+  get '/api/get_user' => 'users#identify'
+
   resources :articles do
     resources :comments
   end
