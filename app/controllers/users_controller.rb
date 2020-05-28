@@ -3,8 +3,13 @@ class UsersController < ApplicationController
     def identify
         # ユーザの問い合わせ
         line_user_id = params[:user_id]
+
+        if line_user_id.blank?
+            render :json => { id: user.id, message: "Error:Please entry user_id", status: 9}
+        end
+
         user = User.find_by(line_user_id: line_user_id)
-        if user.present? 
+        if user.present? # userが存在するか 
             render :json => { id: user.id, message: "Discovered user", status: 1}
         else 
             # render :json => { message: "Error : Not find user"}
