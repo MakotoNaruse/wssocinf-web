@@ -1,0 +1,26 @@
+class SituationController < ApplicationController
+
+    def changeSituation
+        # ユーザの問い合わせ
+        line_user_id = params[:user_id]
+        # situationの問い合わせ
+        situation_num = params[:situation]
+
+        if line_user_id.blank?
+            render :json => { message: "Error : Please entry user_id", status: 9}
+        end
+
+        #if situation_num.blank?
+            #render :json => { message: "Error : Please entry your situation", status: 9}
+        #end
+
+        user = User.find_by(line_user_id: line_user_id)
+        if user.present? # userが存在するか 
+            render :json => { message: "Succeed!!", status: 1}
+        else 
+            render :json => { message: "Error : Not find user", status: 9}
+        end
+
+    end
+
+end
