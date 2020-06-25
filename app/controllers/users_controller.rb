@@ -6,6 +6,7 @@ class UsersController < ApplicationController
 
         if line_user_id.blank?
             render :json => { id: user.id, message: "Error:Please entry user_id", status: 9}
+            return
         end
 
         user = User.find_by(line_user_id: line_user_id)
@@ -23,7 +24,7 @@ class UsersController < ApplicationController
         end
     end
 
-    def changeSituation
+    def change_situation
         # ユーザの問い合わせ
         line_user_id = params[:user_id]
         # situationの問い合わせ
@@ -31,15 +32,23 @@ class UsersController < ApplicationController
 
         if line_user_id.blank?
             render :json => { message: "Error : Please entry user_id", status: 9}
+            return 
         end
 
-        #if situation_num.blank?
-            #render :json => { message: "Error : Please entry your situation", status: 9}
-        #end
+        if situation_num.blank?
+            render :json => { message: "Error : Please entry your situation", status: 9}
+            return
+        end
 
         user = User.find_by(line_user_id: line_user_id)
+        
         if user.present? # userが存在するか 
-            render :json => { message: "Succeed!!", status: 1}
+            user.situation = situation_num
+            if user.save
+                render :json => { message: "Succeed!!", status: 1}
+            else
+                render :json => { message: "Miss in change user situation", status: 9}
+            end
         else 
             render :json => { message: "Error : Not find user", status: 9}
         end
