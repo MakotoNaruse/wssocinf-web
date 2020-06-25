@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   root 'welcome#index'
 
   get '/api/get_user' => 'users#identify'
-  get '/api/change_situation' => 'situation#changeSituation'
+  get '/api/change_situation' => 'users#changeSituation'
   get '/api/get_recipe' => 'recipe#recipeInfo'
 
   resources :articles do
