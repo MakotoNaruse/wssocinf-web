@@ -17,7 +17,7 @@ class UsersController < ApplicationController
             new_user = User.new
             new_user.line_user_id = line_user_id
             if new_user.save
-                render :json => { id: new_user.id, message: "User created!", status: 2, situation: user.situation}
+                render :json => { id: new_user.id, message: "User created!", status: 2, situation: new_user.situation}
             else
                 render :json => { message: "Error : Failed to create user", status: 9}
             end
