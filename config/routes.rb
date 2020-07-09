@@ -9,7 +9,6 @@ Rails.application.routes.draw do
   get '/api/get_user' => 'users#identify'
   post '/api/change_situation' => 'users#change_situation'
   get '/api/change_situation' => 'users#change_situation'
-  get '/api/get_recipe' => 'recipe#recipeInfo'
 
   get '/api/get_recipe' => 'recipes#get_recipe'
 
