@@ -1,7 +1,7 @@
 class RecipesController < ApplicationController
 
   def get_recipe
-    # ユーザの問い合わせ
+    # レシピの問い合わせ
     recipe_id = params[:recipe_id]
 
     if recipe_id.blank?
