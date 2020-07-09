@@ -11,7 +11,7 @@ class RecipesController < ApplicationController
 
     recipe = Recipe.find_by(id: recipe_id)
     if recipe.present? # recipeが存在するか 
-      render :json => { id: recipe.id, img_url: recipe.img_url, recipe_text: recipe.recipe_text, message: "Discovered recipe", status: 1}
+      render :json => { id: recipe.id, name: recipe.name, img_url: recipe.img_url, recipe_text: recipe.recipe_text, message: "Discovered recipe", status: 1}
     else
       render :json => { id: recipe_id, message: "recipe not found", status: 9}
     end
