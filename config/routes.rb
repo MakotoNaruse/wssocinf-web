@@ -8,6 +8,8 @@ Rails.application.routes.draw do
 
   get '/api/get_user' => 'users#identify'
 
+  get 'api/get_recipe' => 'recipes#get_recipe'
+
   resources :articles do
     resources :comments
   end
