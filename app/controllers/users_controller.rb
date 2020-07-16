@@ -5,19 +5,20 @@ class UsersController < ApplicationController
         line_user_id = params[:user_id]
 
         if line_user_id.blank?
-            render :json => { id: user.id, message: "Error:Please entry user_id", status: 9}
+            render :json => { message: "Error:Please entry user_id", status: 9}
             return
         end
 
         user = User.find_by(line_user_id: line_user_id)
         if user.present? # userが存在するか 
-            render :json => { id: user.id, message: "Discovered user", status: 1, situation: user.situation}
+            past_time = Time.current - user.last_recieved_time
+            render :json => { id: user.id, message: "Discovered user", status: 1, situation: user.situation, time: past_time }
         else 
-            # render :json => { message: "Error : Not find user"}
             new_user = User.new
             new_user.line_user_id = line_user_id
+            new_user.last_recieved_time = Time.current
             if new_user.save
-                render :json => { id: new_user.id, message: "User created!", status: 2, situation: new_user.situation}
+                render :json => { id: new_user.id, message: "User created!", status: 2, situation: new_user.situation, time: 0 }
             else
                 render :json => { message: "Error : Failed to create user", status: 9}
             end
@@ -44,6 +45,7 @@ class UsersController < ApplicationController
         
         if user.present? # userが存在するか 
             user.situation = situation_num
+            user.last_recieved_time = Time.current
             if user.save
                 render :json => { message: "Succeed!!", status: 1}
             else
