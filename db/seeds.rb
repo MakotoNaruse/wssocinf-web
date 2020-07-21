@@ -7,18 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 Recipe.all.destroy_all
 
-sake_recipe=<<EOS
-1.
-  鮭は洗って水気をふき、塩、こしょうをして５分程おき、水気をふいて小麦粉を全体にまぶし、余分な粉を落とす。
-2.
-  フライパンにサラダ油を熱し、バターを加えて溶かし、鮭の表側を下にして入れ、中弱火で焼く。焼き色がついたら返し、反対側も焼いて器に取り出す。
-3.
-  フライパンをきれいにして、しょうゆ、みりん、バター、レモンのしぼり汁を加え、ひと煮立ちさせて鮭にかける。
-4.
-  レタスとプチトマトを添える。
+sake_recipe="https://www.kikkoman.co.jp/homecook/search/recipe/00004684/index.html"
 
-URL : https://www.kikkoman.co.jp/homecook/search/recipe/00004684/index.html
-EOS
 
 beef_wellington_recipe=<<EOS
 1.
