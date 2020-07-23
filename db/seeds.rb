@@ -27,15 +27,15 @@ garlic_shrimp="https://www.nichireifoods.co.jp/media/9876/"
 
 
 [
-  [1, "鮭のムニエル", sake_recipe, "https://drive.google.com/file/d/1IcMeN_2uRhepimp7SwslbhKIJZ1r784B/view?usp=sharing"],
-  [2, "ビーフウェリントン", beef_wellington_recipe, "https://drive.google.com/file/d/1guymDpT9Z9CF8poDtRu-pdC4fXmDwMLy/view?usp=sharing"],
-  [3, "タコライス", tacorice_recipe, "https://drive.google.com/file/d/1ahJVcTqSwbHy-AvILLu2VwU3KU5S-mlW/view?usp=sharing"],
-  [4, "ビーフステーキ", beef_steak_recipe, "https://drive.google.com/file/d/1wiYQ-8abTk-iJd_UYTYxYrTYyZij_cGu/view?usp=sharing"],
-  [5, "青椒肉絲", chinjao_rosu_recipe, "https://drive.google.com/file/d/1VKnE6wnKdzqY3J9jwd9GAiAN3IIiWlNE/view?usp=sharing"],
-  [6, "豆腐バーガー", tofu_burger, "https://drive.google.com/file/d/1HlaFcCvKSl2kv2mOvQ2uAILj3eBZeJ29/view?usp=sharing"],
-  [7, "海鮮アボカドユッケ", seafood_avocado, "https://drive.google.com/file/d/1IXn4-V8ARgXmDxUKJh72YK8sJidT8hCt/view?usp=sharing"],
-  [8, "ナスとチーズのベジタリアン", eggplant_cheese, "https://drive.google.com/file/d/13QrDGISnGE9BfpxVAUtSG4sErnYt93AN/view?usp=sharing"],
-  [9, "ガーリックシュリンプ", garlic_shrimp, "https://drive.google.com/file/d/1AwHGWqsbVojWBTrRvW29WR1lnqLrObil/view?usp=sharing"]
+  [1, "鮭のムニエル", sake_recipe, "https://drive.google.com/uc?id=1IcMeN_2uRhepimp7SwslbhKIJZ1r784B"],
+  [2, "ビーフウェリントン", beef_wellington_recipe, "https://drive.google.com/uc?id=1guymDpT9Z9CF8poDtRu-pdC4fXmDwMLy"],
+  [3, "タコライス", tacorice_recipe, "https://drive.google.com/uc?id=1ahJVcTqSwbHy-AvILLu2VwU3KU5S-mlW"],
+  [4, "ビーフステーキ", beef_steak_recipe, "https://drive.google.com/uc?id=1wiYQ-8abTk-iJd_UYTYxYrTYyZij_cGu"],
+  [5, "青椒肉絲", chinjao_rosu_recipe, "https://drive.google.com/uc?id=1VKnE6wnKdzqY3J9jwd9GAiAN3IIiWlNE"],
+  [6, "豆腐バーガー", tofu_burger, "https://drive.google.com/uc?id=1HlaFcCvKSl2kv2mOvQ2uAILj3eBZeJ29"],
+  [7, "海鮮アボカドユッケ", seafood_avocado, "https://drive.google.com/uc?id=1IXn4-V8ARgXmDxUKJh72YK8sJidT8hCt"],
+  [8, "ナスとチーズのベジタリアン", eggplant_cheese, "https://drive.google.com/uc?id=13QrDGISnGE9BfpxVAUtSG4sErnYt93AN"],
+  [9, "ガーリックシュリンプ", garlic_shrimp, "https://drive.google.com/uc?id=1AwHGWqsbVojWBTrRvW29WR1lnqLrObil"]
 ].each do |id, name, recipe_text, img_url|
   Recipe.create!(
     {
