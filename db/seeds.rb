@@ -32,10 +32,10 @@ garlic_shrimp="https://www.nichireifoods.co.jp/media/9876/"
   [3, "タコライス", tacorice_recipe, "https://drive.google.com/uc?id=1ahJVcTqSwbHy-AvILLu2VwU3KU5S-mlW"],
   [4, "ビーフステーキ", beef_steak_recipe, "https://drive.google.com/uc?id=1wiYQ-8abTk-iJd_UYTYxYrTYyZij_cGu"],
   [5, "青椒肉絲", chinjao_rosu_recipe, "https://drive.google.com/uc?id=1VKnE6wnKdzqY3J9jwd9GAiAN3IIiWlNE"],
-  [6, "豆腐バーガー", tofu_burger, "https://drive.google.com/uc?id=1HlaFcCvKSl2kv2mOvQ2uAILj3eBZeJ29"],
-  [7, "海鮮アボカドユッケ", seafood_avocado, "https://drive.google.com/uc?id=1IXn4-V8ARgXmDxUKJh72YK8sJidT8hCt"],
-  [8, "ナスとチーズのベジタリアン", eggplant_cheese, "https://drive.google.com/uc?id=13QrDGISnGE9BfpxVAUtSG4sErnYt93AN"],
-  [9, "ガーリックシュリンプ", garlic_shrimp, "https://drive.google.com/uc?id=1AwHGWqsbVojWBTrRvW29WR1lnqLrObil"]
+  [6, "豆腐バーガー", tofu_burger, "https://cdn-i-media.kidsna.com/resize/setting(dw=720,da=l,q=80,of=jpg)/article/7694/wmRaufALaxNUm0bcLe7rQ71CChMvkUMjdaFrodRgltsKiHZP5vT6S1Fs6coy4JWm?d=5d2d5b9f&h=c63ae4ea51e46af2ad311b1f6dee3d157a1e90e759647554ce0bce5b5c80b257"],
+  [7, "海鮮アボカドユッケ", seafood_avocado, "https://kyomachi.dkdining.com/nagoya/wp-content/uploads/sites/8/2020/04/87824fbbd198d2227834cba5181045bd.jpg"],
+  [8, "ナスとチーズのベジタリアン", eggplant_cheese, "https://previews.123rf.com/images/alexbaidj/alexbaidj1608/alexbaidj160800046/62955865-白い皿にスライスしたナスにチーズ-フェタチーズ、チェリー-トマト、バジルの葉、オリーブ-オイル焼き扇形のショットを閉じる%E3%80%82ベジタリアン料.jpg"],
+  [9, "ガーリックシュリンプ", garlic_shrimp, "https://www.nichireifoods.co.jp/media/wp-content/uploads/2019/07/1908_01_garlic-shrimp_01.jpg"]
 ].each do |id, name, recipe_text, img_url|
   Recipe.create!(
     {
